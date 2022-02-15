@@ -27,3 +27,7 @@ Route::get('/create', 'GuestController@create') -> name('create');
 Route::post('/create/store', 'GuestController@store') -> name('store');
 
 Route::get('/api/list/postcard', 'ApiController@getPostcard') -> name('api.list.postcard');
+
+Route::post('/register', 'Auth\RegisterController@register') ->name('register');
+Route::post('/login', 'Auth\LoginController@login') ->name('login');
+Route::get('/logout', 'Auth\LoginController@logout') ->name('logout');

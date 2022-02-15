@@ -2,7 +2,10 @@
 @section('content')
 
 <h2>Listato cartoline</h2>
-<button><a href="{{ route('create') }}">Crea nuovo post</a></button>
+@auth
+    <button><a href="{{ route('create') }}">Crea nuovo post</a></button>
+@endauth
+
 <postcard-component></postcard-component>
     
 @endsection
